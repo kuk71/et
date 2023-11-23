@@ -21,26 +21,32 @@ class InstituteBeginner extends LL
             [
                 'file' => "1",
                 'description' => 'Аэропорт. The airport.',
+                'wordsKitId' => [391],
                 'lingofon_lesson_id' => [434],
+
             ],
             [
                 'file' => "2",
                 'description' => 'Гостиница Бирдсли. The Beardsley hotel.',
+                'wordsKitId' => [392],
                 'lingofon_lesson_id' => [435],
             ],
             [
                 'file' => "3",
                 'description' => 'Наши номера. Our rooms.',
+                'wordsKitId' => [393],
                 'lingofon_lesson_id' => [436],
             ],
             [
                 'file' => "4",
                 'description' => "Газетный киоск. The newsagent's.",
+                'wordsKitId' => [394],
                 'lingofon_lesson_id' => [437],
             ],
             [
                 'file' => "5",
                 'description' => "Еда. Food.",
+                'wordsKitId' => [395],
                 'lingofon_lesson_id' => [438],
             ],
             [

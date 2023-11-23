@@ -26,8 +26,8 @@ echo $form
         'style' => 'width: 300px',
         'autofocus' => 'true',
         // 'list' => 'wordSelect',
-        'oninput' => 'updateList();',
-        'onkeyup' => 'inpKeyUp(event.code);',
+        // 'oninput' => 'updateList();',
+        // 'onkeyup' => 'inpKeyUp(event.code);',
         // 'onselect' => 'alert(1)',
         'autocomplete' => "off"]);
 

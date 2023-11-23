@@ -1,4 +1,11 @@
 <?php
+$this->title = 'Лингафонный (аудированный) курс уровня intermediate (средний). Британский лингафонный институт. For 
+    intermediate. The Linguaphone Institute.';
+$this->params['keywords'] = 'английский язык, обучение, бесплатно, лингафонный курс, лингафон, аудированный курс, intermediate';
+$this->params['description'] = 'Лингафонный (аудированный) курс для уровня intermediate (начинающий). Британский лингафонный 
+    институт. Обучение по методу Умина / Замяткина на базе лингафоннго (аудированного) курса британского лингафонного 
+    института. For intermediate. The Linguaphone Institute.';
+
 $header = "Лингафонный курс: Intermediate.";
 
 $description = "
