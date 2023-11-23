@@ -338,10 +338,46 @@ function echoWordsToStudy($lessonContent, $LL, $part) {
     echo "<div class='paragraph'>";
     echo "<h3>Новые слова:</h3>";
 
+
+
     echo "<div class='wordToStudy'><a target='_blank' href='/study?kitId={$lessonContent['wordsKitId'][$key]}'>Перейти к изучению слов »»»</a></div>";
 
+
+    $wordList = $LL::getWordList($key);
+
+    $wordListStyle = "";
+    if (count($wordList) > 20) {
+        $wordListStyle = "style='display: none'";
+
+        echo "
+        <SCRIPT>
+            let isWordListVisible = false;
+            
+            function wordListVisible() {
+                isWordListVisible = !isWordListVisible;
+                
+                let display = 'none';
+                let wordListVisibleText = 'Развернуть список  слов';
+                
+                if (isWordListVisible) {
+                    display = '';
+                    wordListVisibleText = 'Свернуть список  слов';
+                }
+                
+                document.getElementById('wordList').style.display = display;
+                document.getElementById('wordListVisible').innerText = wordListVisibleText;
+            }
+        </SCRIPT>
+        
+        ";
+
+        echo "<div class='wordToStudy' style='font-weight: normal;'><a id='wordListVisible' href='' onclick='wordListVisible(); return false;'>Развернуть список слов</a></div>";
+    }
+
+    echo "<div id='wordList' $wordListStyle>";
+
     $i = 0;
-    foreach($LL::getWordList($key) AS $word){
+    foreach($wordList AS $word){
         $i++;
         $translate = implode(", ", $word[2]);
 
@@ -352,7 +388,7 @@ function echoWordsToStudy($lessonContent, $LL, $part) {
             </div>";
     }
 
-    echo "</div>";
+    echo "</div></div>";
 }
 
 function echoMoveLessons($lessonKey, $lessonNamePrev, $lessonNameNext, $LL, $lessonContent)
