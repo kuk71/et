@@ -30,12 +30,7 @@
 /www/codeception.yml
 /www/composer.lock
 /www/docker-compose.yml
-/www/exportDictinoryToSQL.php
 /www/LICENSE.md
-/www/requirements.php
-/www/Vagrantfile
-/www/yii
-/www/yii.bat
 /www/views/admin/
 /log/
 /LICENSE
