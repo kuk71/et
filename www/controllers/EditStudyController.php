@@ -332,10 +332,6 @@ class EditStudyController extends Controller
 
     private function isFormNotValid($model)
     {
-        $a = $model->load(\Yii::$app->request->post());
-        $b = $model->validate();
-        $c = \Yii::$app->request->post();
-
         return !($model->load(\Yii::$app->request->post()) && $model->validate());
     }
 

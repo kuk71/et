@@ -26,57 +26,63 @@ class InstituteBeginner extends LL
 
             ],
             [
-                'file' => "2",
+                'file' => "1",
                 'description' => 'Гостиница Бирдсли. The Beardsley hotel.',
                 'wordsKitId' => [392],
                 'lingofon_lesson_id' => [435],
             ],
             [
-                'file' => "3",
+                'file' => "1",
                 'description' => 'Наши номера. Our rooms.',
                 'wordsKitId' => [393],
                 'lingofon_lesson_id' => [436],
             ],
             [
-                'file' => "4",
+                'file' => "1",
                 'description' => "Газетный киоск. The newsagent's.",
                 'wordsKitId' => [394],
                 'lingofon_lesson_id' => [437],
             ],
             [
-                'file' => "5",
+                'file' => "1",
                 'description' => "Еда. Food.",
                 'wordsKitId' => [395],
                 'lingofon_lesson_id' => [438],
             ],
             [
-                'file' => "6",
+                'file' => "1",
                 'description' => "Осмотр доcтопримечательностей. Sightseeing.",
+                'wordsKitId' => [396],
                 'lingofon_lesson_id' => [439],
             ],
             [
-                'file' => "7",
+                'file' => "1",
                 'description' => "Банк и почта. The bank and the post office.",
+                'wordsKitId' => [397],
                 'lingofon_lesson_id' => [440],
             ],
             [
-                'file' => "8",
+                'file' => "1",
                 'description' => "Магазины. The shops.",
+                'wordsKitId' => [398],
                 'lingofon_lesson_id' => [441],
             ],
             [
-                'file' => "9",
+                'file' => "1",
                 'description' => "День рождения Саймона. Simon's birthday.",
+                'wordsKitId' => [399],
                 'lingofon_lesson_id' => [442],
             ],
             [
-                'file' => "10",
+                'file' => "1",
                 'description' => "Званый вечер. The party.",
+                'wordsKitId' => [400],
                 'lingofon_lesson_id' => [443],
             ],
             [
                 'file' => "11",
                 'description' => "Футбол. Football.",
+
                 'lingofon_lesson_id' => [444],
             ],
             [

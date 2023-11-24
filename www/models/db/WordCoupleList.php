@@ -25,23 +25,23 @@ class WordCoupleList extends ActiveRecord
         $wordId = (int)$wordId;
         $languageTranslationId = (int)$languageTranslationId;
 
-        $wordCouple = self::findBySql(
-            "
+        $query = "
             SELECT 
-                `word_couple_list`.`word_couple_id`,
-                `word_list`.`word_spelling`
-            FROM
-                `word_couple_list`
-            JOIN
-                `word_list`
-                    ON (`word_couple_list`.`word_linked_id` = `word_list`.`word_id`)
-            WHERE
-                `word_couple_list`.`word_id` = $wordId
-                AND `word_list`.`language_id` = $languageTranslationId
-            ORDER BY
-                `word_list`.`word_spelling` ASC
-            "
-        )
+                    `word_couple_list`.`word_couple_id`,
+                    `word_list`.`word_spelling`
+                FROM
+                    `word_couple_list`
+                JOIN
+                    `word_list`
+                        ON (`word_couple_list`.`word_linked_id` = `word_list`.`word_id`)
+                WHERE
+                    `word_couple_list`.`word_id` = $wordId
+                    AND `word_list`.`language_id` = $languageTranslationId
+                ORDER BY
+                    `word_list`.`word_spelling` ASC
+        ";
+
+        $wordCouple = self::findBySql("$query")
             ->asArray()
             ->all();
 
