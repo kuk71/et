@@ -24,6 +24,7 @@ $lessonContent = $lessonsContent[$lessonKey];
 $lessonNamePrev = $LL::getLessonNamePrev();
 $lessonNameNext = $LL::getLessonNameNext();
 
+$this->registerJsFile("/JS/lessonVisible.js");
 
 putMetaTags($lessonContent, $this, $LL, $header);
 
@@ -168,6 +169,10 @@ function echoStyle()
             font-size: 20px;
         }
 
+        div.controlVisible {
+            padding: 0 0 10px 20px;
+        }
+
         div.page {
             text-align: center;
             padding: 20px 0 100px;
@@ -273,6 +278,11 @@ function echoTheory($content) {
     echo "<div class='paragraph'>";
     echo "<h3>Объяснения к уроку.</h3>";
 
+    echo "<div class='controlVisible'>
+                <a href='' onclick='return changeVisible(\"theoryVisible\");'>
+                <span id='theoryVisibleControl'>Свернуть</span> теорию.</a></div>";
+    echo "<div id='theoryVisible'>";
+
     foreach ($content as $part) {
         switch ($part["type"]) {
             case "header":
@@ -290,7 +300,7 @@ function echoTheory($content) {
         }
     }
 
-    echo "</div>";
+    echo "</div></div>";
 }
 
 function echoSpeaking($lessonContent, $part)
@@ -339,42 +349,15 @@ function echoWordsToStudy($lessonContent, $LL, $part) {
     echo "<h3>Новые слова:</h3>";
 
 
-
-    echo "<div class='wordToStudy'><a target='_blank' href='/study?kitId={$lessonContent['wordsKitId'][$key]}'>Перейти к изучению слов »»»</a></div>";
-
-
     $wordList = $LL::getWordList($key);
 
-    $wordListStyle = "";
-    if (count($wordList) > 20) {
-        $wordListStyle = "style='display: none'";
+    echo "<div class='wordToStudy'><a target='_blank' href='/study?kitId={$lessonContent['wordsKitId'][$key]}'>
+            Перейти к изучению слов »»»</a></div>";
 
-        echo "
-        <SCRIPT>
-            let isWordListVisible = false;
-            
-            function wordListVisible() {
-                isWordListVisible = !isWordListVisible;
-                
-                let display = 'none';
-                let wordListVisibleText = 'Развернуть список  слов';
-                
-                if (isWordListVisible) {
-                    display = '';
-                    wordListVisibleText = 'Свернуть список  слов';
-                }
-                
-                document.getElementById('wordList').style.display = display;
-                document.getElementById('wordListVisible').innerText = wordListVisibleText;
-            }
-        </SCRIPT>
-        
-        ";
-
-        echo "<div class='wordToStudy' style='font-weight: normal;'><a id='wordListVisible' href='' onclick='wordListVisible(); return false;'>Развернуть список слов</a></div>";
-    }
-
-    echo "<div id='wordList' $wordListStyle>";
+    echo "<div class='controlVisible'>
+                <a style='font-size:16px; font-weight: normal' href='' onclick='return changeVisible(\"wordVisible\");'>
+                <span id='wordVisibleControl'>Свернуть</span> список слов.</a></div>";
+    echo "<div id='wordVisible'>";
 
     $i = 0;
     foreach($wordList AS $word){
