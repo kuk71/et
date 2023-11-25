@@ -82,6 +82,12 @@ $config = [
                 '/lingofon/help_lingofon_lesson_player' => '/lingofon/help-lingofon-lesson-player',
                 '/lingofon/help_speaking_player' => '/lingofon/help-speaking-player',
                 '/lingofon/metod_umin_zamyatkin' => '/lingofon/metod-umin-zamyatkin',
+
+                [
+                    'pattern' => '/lingofon/lesson_list',
+                    'route' => '/course',
+                    'defaults' => ['courseName' => 'linguaphone_institute_english_course_for_beginners',],
+                ],
             ],
         ],
     ],
