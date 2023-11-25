@@ -80,34 +80,39 @@ class InstituteBeginner extends LL
                 'lingofon_lesson_id' => [443],
             ],
             [
-                'file' => "11",
+                'file' => "1",
                 'description' => "Футбол. Football.",
-
+                'wordsKitId' => [401],
                 'lingofon_lesson_id' => [444],
             ],
             [
-                'file' => "12",
+                'file' => "1",
                 'description' => "Телефонные звонки. Telephone calls.",
+                'wordsKitId' => [402],
                 'lingofon_lesson_id' => [445],
             ],
             [
-                'file' => "13",
+                'file' => "1",
                 'description' => "Поездка. A journey.",
+                'wordsKitId' => [403],
                 'lingofon_lesson_id' => [446],
             ],
             [
-                'file' => "14",
+                'file' => "1",
                 'description' => "За городом. The country.",
+                'wordsKitId' => [404],
                 'lingofon_lesson_id' => [447],
             ],
             [
-                'file' => "15",
+                'file' => "1",
                 'description' => "Парикмахерская и химчистка. The hairdresser's and the cleaner's.",
+                'wordsKitId' => [405],
                 'lingofon_lesson_id' => [448],
             ],
             [
-                'file' => "16",
+                'file' => "1",
                 'description' => "Поздняя ночь. A late night.",
+                'wordsKitId' => [406],
                 'lingofon_lesson_id' => [449],
             ],
             [
