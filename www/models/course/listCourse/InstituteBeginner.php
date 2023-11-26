@@ -116,23 +116,27 @@ class InstituteBeginner extends LL
                 'lingofon_lesson_id' => [449],
             ],
             [
-                'file' => "17",
+                'file' => "1",
                 'description' => "Приятный спокойный день. A nice quiet afternoon.",
+                'wordsKitId' => [407],
                 'lingofon_lesson_id' => [450],
             ],
             [
-                'file' => "18",
+                'file' => "1",
                 'description' => "На дискотеке. At a discotheque.",
+                'wordsKitId' => [408],
                 'lingofon_lesson_id' => [451],
             ],
             [
-                'file' => "19",
+                'file' => "1",
                 'description' => "Совещание по продажам. A sales conference.",
+                'wordsKitId' => [409],
                 'lingofon_lesson_id' => [452],
             ],
             [
-                'file' => "20",
+                'file' => "1",
                 'description' => "Достопримечательности в кембридже. Sightseeing in cambridge.",
+                'wordsKitId' => [410],
                 'lingofon_lesson_id' => [453],
             ],
             [
