@@ -140,28 +140,33 @@ class InstituteBeginner extends LL
                 'lingofon_lesson_id' => [453],
             ],
             [
-                'file' => "21",
+                'file' => "1",
                 'description' => "Поездка в Сассекс. Going to Sussex.",
+                'wordsKitId' => [411],
                 'lingofon_lesson_id' => [454],
             ],
             [
-                'file' => "22",
+                'file' => "1",
                 'description' => "Как прошли выходные. Hearing about the weekend.",
+                'wordsKitId' => [412],
                 'lingofon_lesson_id' => [455],
             ],
             [
-                'file' => "23",
+                'file' => "1",
                 'description' => "Доктор. The doctor.",
+                'wordsKitId' => [413],
                 'lingofon_lesson_id' => [456],
             ],
             [
-                'file' => "24",
+                'file' => "1",
                 'description' => "Выгодные покупки. College.",
+                'wordsKitId' => [414],
                 'lingofon_lesson_id' => [457],
             ],
             [
-                'file' => "25",
+                'file' => "1",
                 'description' => "Колледж. Bargains.",
+                'wordsKitId' => [415],
                 'lingofon_lesson_id' => [458],
             ],
             [
