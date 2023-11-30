@@ -9,7 +9,10 @@ function changeVisible(tagId) {
     }
 
     document.getElementById(tagId).style.display = displayVal;
-    document.getElementById(tagIdControl).innerText = textControl;
+
+    if (document.getElementById(tagIdControl)) {
+        document.getElementById(tagIdControl).innerText = textControl;
+    }
 
     return false;
 }

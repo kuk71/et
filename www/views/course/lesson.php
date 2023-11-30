@@ -1,4 +1,6 @@
 <?php
+
+use app\models\db\Lingofon;
 use yii\bootstrap\Html;
 
 /** @var $courseName - Передано из контроллера */
@@ -35,6 +37,37 @@ echoHeaders($lessonName, $header);
 echoLesson($lessonName, $lessonContent, $courseName, $LL);
 
 echoMoveLessons($lessonKey, $lessonNamePrev, $lessonNameNext, $LL, $lessonContent);
+
+function echoLesson($lessonName, $lessonContent, $courseName, $LL)
+{
+    /**
+     * @var  $lessonParts - массив содержимого урока. Получается из файла урока $fileLessonName
+     */
+
+    // отрисовывает урок
+    $fileLessonName = "$courseName/" . $lessonContent['file'] . ".php";
+    require $fileLessonName;
+
+    foreach ($lessonParts as $part) {
+        switch ($part['type']) {
+            case ("paragraph"):
+                echoParagraph($part["content"]);
+                break;
+            case ("theory"):
+                echoTheory($part["content"]);
+                break;
+            case ("WordsToStudy"):
+                echoWordsToStudy($lessonContent, $LL, $part);
+                break;
+            case ("lingofon"):
+                echoLingofon($lessonContent, $part);
+                break;
+            case ("speaking"):
+                echoSpeaking($lessonContent, $part);
+                break;
+        }
+    }
+}
 
 function echoParagraph($content)
 {
@@ -135,6 +168,16 @@ function echoStyle()
 
         p.exampleCont {
             margin: 0;
+            font-size: 18px;
+        }
+
+        p.lingofonContent {
+            margin: 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        p.lingofonTranslation {
             font-size: 18px;
         }
 
@@ -243,38 +286,9 @@ function echoHeaders($lessonName, $header)
     ";
 }
 
-function echoLesson($lessonName, $lessonContent, $courseName, $LL)
+
+function echoTheory($content)
 {
-    /**
-     * @var  $lessonParts - массив содержимого урока. Получается из файла урока $fileLessonName
-     */
-
-    // отрисовывает урок
-    $fileLessonName = "$courseName/" . $lessonContent['file'] . ".php";
-    require $fileLessonName;
-
-    foreach ($lessonParts as $part) {
-        switch ($part['type']) {
-            case ("paragraph"):
-                echoParagraph($part["content"]);
-                break;
-            case ("theory"):
-                echoTheory($part["content"]);
-                break;
-            case ("WordsToStudy"):
-                echoWordsToStudy($lessonContent, $LL, $part);
-                break;
-            case ("lingofon"):
-                echoLingofon($lessonContent, $part);
-                break;
-            case ("speaking"):
-                echoSpeaking($lessonContent, $part);
-                break;
-        }
-    }
-}
-
-function echoTheory($content) {
     echo "<div class='paragraph'>";
     echo "<h3>Объяснения к уроку.</h3>";
 
@@ -321,7 +335,8 @@ function echoSpeaking($lessonContent, $part)
     echo "</div>";
 }
 
-function echoLingofon($lessonContent, $part) {
+function echoLingofon($lessonContent, $part)
+{
     $lingofonLessonId = $lessonContent['lingofon_lesson_id'][0];
 
     $lingofonPart = "";
@@ -332,12 +347,43 @@ function echoLingofon($lessonContent, $part) {
     echo "<div class='paragraph'>";
     echo "<h3>Лингафонный&nbsp;урок{$lingofonPart}:</h3>";
 
-    echo "<div class='wordToStudy'><a class='lng' target='_blank' href='/lingofon/lingofon_content_play?lingofon_lesson_id[]={$lingofonLessonId}'>Прослушайте аудио урок$lingofonPart&nbsp;»»»</a></div>";
+    echo "<div class='wordToStudy'>
+            <a class='lng' target='_blank' 
+                href='/lingofon/lingofon_content_play?lingofon_lesson_id[]={$lingofonLessonId}'
+                >Прослушайте аудио урок$lingofonPart&nbsp;»»»</a>
+            </div>";
+
+    echo textLingofon($lingofonLessonId);
 
     echo "</div>";
 }
 
-function echoWordsToStudy($lessonContent, $LL, $part) {
+function textLingofon($lessonId)
+{
+    $lessonContent = Lingofon::getLessonContent([$lessonId]);
+    $jsLessonId = "l{$lessonId}";
+
+    echo "<div class='wordToStudy'>
+            <a style='font-size:16px; font-weight: normal' href='' onclick='return changeVisible(\"{$jsLessonId}\");'>
+                <span id='{$jsLessonId}Control'>Развернуть</span> текст урока.</a>
+            </div>";
+
+    echo "<div id='{$jsLessonId}' class='wordToStudy' style='font-weight: normal; display: none'>";
+    echo "<p style='font-size: 0.8em'>Что бы увидеть перевод предложения кликните по нему.</p>";
+    foreach ($lessonContent AS $lessonLine) {
+        $jsLineId = "l{$lessonId}n{$lessonLine['lingofon_content_num']}";
+
+        echo "<div onclick='changeVisible(\"{$jsLineId}\")' style='margin: 0 0 10px'>";
+        echo "<p class='lingofonContent'>{$lessonLine['lingofon_content']}</p>";
+        echo "<p id='{$jsLineId}' class='lingofonTranslation' style='display: none'>{$lessonLine['lingofon_translation']}</p>";
+        echo "</div>";
+    }
+
+    echo "</div>";
+}
+
+function echoWordsToStudy($lessonContent, $LL, $part)
+{
 
     if (!isset($part['num'])) {
         $part['num'] = 1;
@@ -368,18 +414,18 @@ function echoWordsToStudy($lessonContent, $LL, $part) {
     echo "<div id='wordVisible'{$styleVisible}>";
 
     $i = 0;
-    foreach($wordList AS $word){
+    foreach ($wordList as $word) {
         $i++;
         $translate = implode(", ", $word[2]);
 
         echo "
-            <div style='padding: 0 0 3px; border: 0px solid black; display: flex; flex-wrap: nowrap;'>
-                <div style='width: 25px; text-align: right; padding-right: 10px; width: 40px'>$i.</div>
-                <div><b>" . Html::encode($word[1]) . "</b> - " . Html::encode($translate) . "</div>
+            <div style='padding: 0 0 3px; margin-left: -15px; display: flex; flex-wrap: nowrap; border: 0px solid red'>
+                <div style='text-align: right; min-width: 25px; font-size: 0.7em; padding-top: 5px; border: 0px solid yellow'>$i.&nbsp;</div>
+                <div style='vertical-align: top; border: 0px solid green'><b>" . Html::encode($word[1]) . "</b> - " . Html::encode($translate) . "</div>
             </div>";
     }
 
-    echo "</div></div>";
+    echo "</div>";
 }
 
 function echoMoveLessons($lessonKey, $lessonNamePrev, $lessonNameNext, $LL, $lessonContent)
@@ -391,13 +437,13 @@ function echoMoveLessons($lessonKey, $lessonNamePrev, $lessonNameNext, $LL, $les
         echo "<h2 style='text-align: left'><a href='" . $lessonNameNext . "'>Начать первый&nbsp;урок&nbsp;»»»</a></h2>";
     } else {
         if ($lessonNamePrev !== "") {
-            echo "<a href='" . $lessonNamePrev . "'>««« Предыдущий</a> ";
+            echo "<a href='" . $lessonNamePrev . "'>««« </a> ";
         }
 
         echo "урок";
 
         if ($lessonNameNext !== "") {
-            echo " <a href='" . $LL::getLessonNameNext() . "'>Следующий »»»</a>";
+            echo " <a href='" . $LL::getLessonNameNext() . "'>следующий »»»</a>";
         }
     }
     echo "</div>";
