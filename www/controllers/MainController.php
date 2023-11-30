@@ -25,6 +25,6 @@ class MainController extends Controller
             return Yii::$app->response->redirect("/img/2.jpg", $statusCode = 302);
         }
 
-        return $this->render('index', []);
+        // return $this->render('index', []);
     }
 }

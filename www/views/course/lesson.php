@@ -354,10 +354,18 @@ function echoWordsToStudy($lessonContent, $LL, $part) {
     echo "<div class='wordToStudy'><a target='_blank' href='/study?kitId={$lessonContent['wordsKitId'][$key]}'>
             Перейти к изучению слов »»»</a></div>";
 
+    $visibleStyle = "";
+    $visibleWord = "Свернуть";
+    if (count($wordList) > 10) {
+        $styleVisible = " style = 'display: none'";
+        $visibleWord = "Развернуть";
+    }
+
     echo "<div class='controlVisible'>
                 <a style='font-size:16px; font-weight: normal' href='' onclick='return changeVisible(\"wordVisible\");'>
-                <span id='wordVisibleControl'>Свернуть</span> список слов.</a></div>";
-    echo "<div id='wordVisible'>";
+                <span id='wordVisibleControl'>{$visibleWord}</span> список слов.</a></div>";
+
+    echo "<div id='wordVisible'{$styleVisible}>";
 
     $i = 0;
     foreach($wordList AS $word){

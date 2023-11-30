@@ -170,28 +170,33 @@ class InstituteBeginner extends LL
                 'lingofon_lesson_id' => [458],
             ],
             [
-                'file' => "26",
+                'file' => "1",
                 'description' => "Грустный день Шейлы. A sad day for Sheila.",
+                'wordsKitId' => [416],
                 'lingofon_lesson_id' => [459],
             ],
             [
-                'file' => "27",
+                'file' => "1",
                 'description' => "Работа Питера. Peter's job.",
+                'wordsKitId' => [417],
                 'lingofon_lesson_id' => [460],
             ],
             [
-                'file' => "28",
+                'file' => "1",
                 'description' => "Новая работа. A new job.",
+                'wordsKitId' => [418],
                 'lingofon_lesson_id' => [461],
             ],
             [
-                'file' => "29",
+                'file' => "1",
                 'description' => "Новый дом. A new house.",
+                'wordsKitId' => [419],
                 'lingofon_lesson_id' => [462],
             ],
             [
-                'file' => "30",
+                'file' => "1",
                 'description' => "Отъезд из гостиницы. Leaving the hotel.",
+                'wordsKitId' => [420],
                 'lingofon_lesson_id' => [463],
             ],
 //            [
