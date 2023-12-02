@@ -20,9 +20,15 @@ class InstituteIntermediate extends LL
 //            ],
             [
                 'file' => "1",
-                'description' => 'Безмятежная жизнь. A quiet life.',
+                'description' => 'Безмятежная жизнь. A date for the theatre.',
                 'wordsKitId' => [421],
                 'lingofon_lesson_id' => [464],
+            ],
+            [
+                'file' => "1",
+                'description' => 'День для театра. A quiet life.',
+                'wordsKitId' => [422],
+                'lingofon_lesson_id' => [492],
             ],
         ];
     }
@@ -40,11 +46,11 @@ class InstituteIntermediate extends LL
                 'nameEn' => 'First',
                 'nameRu' => ['Первый', 'первого', 'первому'],
             ],
-//            [
-//                'url' => 'second_english_lesson',
-//                'nameEn' => 'Second',
-//                'nameRu' => ['Второй', 'второго', 'второму'],
-//            ],
+            [
+                'url' => 'second_english_lesson',
+                'nameEn' => 'Second',
+                'nameRu' => ['Второй', 'второго', 'второму'],
+            ],
 //            [
 //                'url' => 'third_english_lesson',
 //                'nameEn' => 'Third',
