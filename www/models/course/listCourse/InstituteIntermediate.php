@@ -20,43 +20,9 @@ class InstituteIntermediate extends LL
 //            ],
             [
                 'file' => "1",
-                'description' => 'Безмятежная жизнь. День для посещения театра. Пикник. A quiet life. A date for the theatre. A picnic.',
-                'lingofon_lesson_id' => [464, 465, 466],
-            ],
-            [
-                'file' => "2",
-                'description' => 'Безмятежная жизнь. День для посещения театра. Пикник. A quiet life. A date for the theatre. A picnic.',
-                'lingofon_lesson_id' => [467, 468, 469],
-            ],
-            [
-                'file' => "3",
-                'description' => 'Дорожное происшествие. Маленькая сплетня. Несколько поручений. A road accident. A little gossip. A few errands.',
-                'lingofon_lesson_id' => [470, 471, 472],
-            ],
-            [
-                'file' => "4",
-                'description' => "Работа и игра. Виды на будущее. После экзаменов. Work and play. Career prospects. After the exams/",
-                'lingofon_lesson_id' => [473,474,475],
-            ],
-            [
-                'file' => "5",
-                'description' => "Неофициальное приглашение. Подробные указания. Обустройство дома. An informal invitation. Detailed directions. Arranging the house.",
-                'lingofon_lesson_id' => [476, 477, 478],
-            ],
-            [
-                'file' => "6",
-                'description' => "Размышления субботним вечером. Гонорар специалисту. Подозреваемый. Saturday night thoughts. The expert's fee. The suspect.",
-                'lingofon_lesson_id' => [479, 480, 481],
-            ],
-            [
-                'file' => "7",
-                'description' => "Выборы в Соединенном Королевстве. Повезло. Морем или самолетом. U.K. elections. In luck. Sea or air.",
-                'lingofon_lesson_id' => [482, 483, 484],
-            ],
-            [
-                'file' => "8",
-                'description' => "Дело привычки. Полезный сосед. Пассажир с сезонным билетом. A matter of habit. A helpful neighbor. The commuter.",
-                'lingofon_lesson_id' => [485, 486, 487],
+                'description' => 'Безмятежная жизнь. A quiet life.',
+                'wordsKitId' => [421],
+                'lingofon_lesson_id' => [464],
             ],
         ];
     }
@@ -74,41 +40,41 @@ class InstituteIntermediate extends LL
                 'nameEn' => 'First',
                 'nameRu' => ['Первый', 'первого', 'первому'],
             ],
-            [
-                'url' => 'second_english_lesson',
-                'nameEn' => 'Second',
-                'nameRu' => ['Второй', 'второго', 'второму'],
-            ],
-            [
-                'url' => 'third_english_lesson',
-                'nameEn' => 'Third',
-                'nameRu' => ['Третий', 'третьего', 'третьему'],
-            ],
-            [
-                'url' => 'fourth_english_lesson',
-                'nameEn' => 'Fourth',
-                'nameRu' => ['Четвёртый', 'четвёртого', 'четвертому'],
-            ],
-            [
-                'url' => 'fifth_english_lesson',
-                'nameEn' => 'Fifth',
-                'nameRu' => ['Пятый', 'пятого', 'пятому'],
-            ],
-            [
-                'url' => 'sixth_english_lesson',
-                'nameEn' => 'Sixth',
-                'nameRu' => ['Шестой', 'шестого', 'шестому'],
-            ],
-            [
-                'url' => 'seventh_english_lesson',
-                'nameEn' => 'Seventh',
-                'nameRu' => ['Седьмой', 'седьмого', 'седьмому'],
-            ],
-            [
-                'url' => 'eighth_english_lesson',
-                'nameEn' => 'Eighth',
-                'nameRu' => ['Восьмой', 'восьмого', 'восьмому'],
-            ],
+//            [
+//                'url' => 'second_english_lesson',
+//                'nameEn' => 'Second',
+//                'nameRu' => ['Второй', 'второго', 'второму'],
+//            ],
+//            [
+//                'url' => 'third_english_lesson',
+//                'nameEn' => 'Third',
+//                'nameRu' => ['Третий', 'третьего', 'третьему'],
+//            ],
+//            [
+//                'url' => 'fourth_english_lesson',
+//                'nameEn' => 'Fourth',
+//                'nameRu' => ['Четвёртый', 'четвёртого', 'четвертому'],
+//            ],
+//            [
+//                'url' => 'fifth_english_lesson',
+//                'nameEn' => 'Fifth',
+//                'nameRu' => ['Пятый', 'пятого', 'пятому'],
+//            ],
+//            [
+//                'url' => 'sixth_english_lesson',
+//                'nameEn' => 'Sixth',
+//                'nameRu' => ['Шестой', 'шестого', 'шестому'],
+//            ],
+//            [
+//                'url' => 'seventh_english_lesson',
+//                'nameEn' => 'Seventh',
+//                'nameRu' => ['Седьмой', 'седьмого', 'седьмому'],
+//            ],
+//            [
+//                'url' => 'eighth_english_lesson',
+//                'nameEn' => 'Eighth',
+//                'nameRu' => ['Восьмой', 'восьмого', 'восьмому'],
+//            ],
 //            [
 //                'url' => 'ninth_english_lesson',
 //                'nameEn' => 'Ninth',

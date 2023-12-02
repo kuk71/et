@@ -2,18 +2,11 @@
 /** @var $lessonParams - массив параметров урока. Получен из контроллера */
 
 $lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 1,
+    "type" => "WordsToStudy",
 ];
 
 $lessonParts[] = [
     "type" => "lingofon",
-    "num" => 2,
-];
-
-$lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 3,
 ];
 
 
