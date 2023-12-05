@@ -30,6 +30,24 @@ class InstituteIntermediate extends LL
                 'wordsKitId' => [422],
                 'lingofon_lesson_id' => [492],
             ],
+            [
+                'file' => "1",
+                'description' => 'A picnic. Пикник',
+                'wordsKitId' => [423],
+                'lingofon_lesson_id' => [493],
+            ],
+            [
+                'file' => "1",
+                'description' => 'Profile Peter Parker. Анкета Питера Паркера',
+                'wordsKitId' => [424],
+                'lingofon_lesson_id' => [494],
+            ],
+            [
+                'file' => "1",
+                'description' => 'Holiday plans. Планы на отпуск',
+                'wordsKitId' => [425],
+                'lingofon_lesson_id' => [495],
+            ],
         ];
     }
 
@@ -51,21 +69,21 @@ class InstituteIntermediate extends LL
                 'nameEn' => 'Second',
                 'nameRu' => ['Второй', 'второго', 'второму'],
             ],
-//            [
-//                'url' => 'third_english_lesson',
-//                'nameEn' => 'Third',
-//                'nameRu' => ['Третий', 'третьего', 'третьему'],
-//            ],
-//            [
-//                'url' => 'fourth_english_lesson',
-//                'nameEn' => 'Fourth',
-//                'nameRu' => ['Четвёртый', 'четвёртого', 'четвертому'],
-//            ],
-//            [
-//                'url' => 'fifth_english_lesson',
-//                'nameEn' => 'Fifth',
-//                'nameRu' => ['Пятый', 'пятого', 'пятому'],
-//            ],
+            [
+                'url' => 'third_english_lesson',
+                'nameEn' => 'Third',
+                'nameRu' => ['Третий', 'третьего', 'третьему'],
+            ],
+            [
+                'url' => 'fourth_english_lesson',
+                'nameEn' => 'Fourth',
+                'nameRu' => ['Четвёртый', 'четвёртого', 'четвертому'],
+            ],
+            [
+                'url' => 'fifth_english_lesson',
+                'nameEn' => 'Fifth',
+                'nameRu' => ['Пятый', 'пятого', 'пятому'],
+            ],
 //            [
 //                'url' => 'sixth_english_lesson',
 //                'nameEn' => 'Sixth',
