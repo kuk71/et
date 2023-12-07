@@ -18,7 +18,6 @@ class MainController extends Controller
 
     public function actionError()
     {
-        Yii::$app->response->statusCode = 200;
         $a = pathinfo(Yii::$app->request->pathInfo, PATHINFO_EXTENSION);
 
         if($a == "jpg" || $a == "gif") {
@@ -30,6 +29,7 @@ class MainController extends Controller
             return "";
         }
 
+        Yii::$app->response->statusCode = 200;
         return $this->render('index', []);
     }
 }

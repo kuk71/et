@@ -48,6 +48,12 @@ class InstituteIntermediate extends LL
                 'wordsKitId' => [425],
                 'lingofon_lesson_id' => [495],
             ],
+            [
+                'file' => "1",
+                'description' => 'Holiday plans. Планы на отпуск',
+                'wordsKitId' => [426],
+                'lingofon_lesson_id' => [496],
+            ],
         ];
     }
 
@@ -84,11 +90,11 @@ class InstituteIntermediate extends LL
                 'nameEn' => 'Fifth',
                 'nameRu' => ['Пятый', 'пятого', 'пятому'],
             ],
-//            [
-//                'url' => 'sixth_english_lesson',
-//                'nameEn' => 'Sixth',
-//                'nameRu' => ['Шестой', 'шестого', 'шестому'],
-//            ],
+            [
+                'url' => 'sixth_english_lesson',
+                'nameEn' => 'Sixth',
+                'nameRu' => ['Шестой', 'шестого', 'шестому'],
+            ],
 //            [
 //                'url' => 'seventh_english_lesson',
 //                'nameEn' => 'Seventh',
