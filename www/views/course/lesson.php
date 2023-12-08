@@ -62,8 +62,14 @@ function echoLesson($lessonName, $lessonContent, $courseName, $LL)
             case ("lingofon"):
                 echoLingofon($lessonContent, $part);
                 break;
+            case ("lingofonAll"):
+                echoLingofonAll($lessonContent);
+                break;
             case ("speaking"):
                 echoSpeaking($lessonContent, $part);
+                break;
+            case ("speakingAll"):
+                echoSpeakingAll($lessonContent, $part);
                 break;
         }
     }
@@ -335,6 +341,62 @@ function echoSpeaking($lessonContent, $part)
     echo "</div>";
 }
 
+function echoSpeakingAll($lessonContent)
+{
+    if (!isset($lessonContent['lingofon_lesson_id_speaking']) || !is_array($lessonContent['lingofon_lesson_id_speaking']) || count($lessonContent['lingofon_lesson_id_speaking']) === 0) {
+        return;
+    }
+
+    echo "<div class='paragraph'>";
+    $header = "Разговорное&nbsp;упражнение:";
+
+    if(count($lessonContent['lingofon_lesson_id']) > 1) {
+        $header = "Разговорные&nbsp;упражнения:";
+    }
+
+    echo "<h3>$header</h3>";
+    $lingofonNum = 0;
+    foreach($lessonContent['lingofon_lesson_id_speaking'] AS $ligofonId) {
+        $lingofonNum++;
+        echo "<div class='paragraph'>";
+        echo "<div class='wordToStudy'>
+                <a class='lng' target='_blank' 
+                href='/lingofon/lingofon_content_play?lingofon_lesson_id[]={$ligofonId}&speaking'>
+                Пройдите разговорный&nbsp;урок$lingofonNum&nbsp;»»»</a></div>";
+
+        echo textLingofon($ligofonId, 'speaking');
+        echo "</div>";
+    }
+}
+
+function echoLingofonAll($lessonContent) {
+    if (!isset($lessonContent['lingofon_lesson_id']) || !is_array($lessonContent['lingofon_lesson_id']) || count($lessonContent['lingofon_lesson_id']) === 0) {
+        return;
+    }
+
+    echo "<div class='paragraph'>";
+    $header = "Лингафонный&nbsp;урок:";
+
+    if(count($lessonContent['lingofon_lesson_id']) > 1) {
+        $header = "Лингафонные&nbsp;уроки:";
+    }
+
+    echo "<h3>$header</h3>";
+    $lingofonNum = 0;
+    foreach($lessonContent['lingofon_lesson_id'] AS $ligofonId) {
+        $lingofonNum++;
+        echo "<div class='paragraph'>";
+        echo "<div class='wordToStudy'>
+            <a class='lng' target='_blank' 
+                href='/lingofon/lingofon_content_play?lingofon_lesson_id[]={$ligofonId}'
+                >Прослушайте аудио урок №$lingofonNum&nbsp;»»»</a>
+            </div>";
+
+        echo textLingofon($ligofonId);
+        echo "</div>";
+    }
+}
+
 function echoLingofon($lessonContent, $part)
 {
     $lingofonLessonId = $lessonContent['lingofon_lesson_id'][0];
@@ -358,10 +420,16 @@ function echoLingofon($lessonContent, $part)
     echo "</div>";
 }
 
-function textLingofon($lessonId)
+function textLingofon($lessonId, $whoseText = 'lingofon')
 {
+    $prefixJsId = "s";
+
+    if ($whoseText === 'lingofon') {
+        $prefixJsId = "l";
+    }
+
     $lessonContent = Lingofon::getLessonContent([$lessonId]);
-    $jsLessonId = "l{$lessonId}";
+    $jsLessonId = "{$prefixJsId}{$lessonId}";
 
     echo "<div class='wordToStudy'>
             <a style='font-size:16px; font-weight: normal' href='' onclick='return changeVisible(\"{$jsLessonId}\");'>
@@ -371,7 +439,7 @@ function textLingofon($lessonId)
     echo "<div id='{$jsLessonId}' class='wordToStudy' style='font-weight: normal; display: none'>";
     echo "<p style='font-size: 0.8em'>Что бы увидеть перевод предложения кликните по нему.</p>";
     foreach ($lessonContent AS $lessonLine) {
-        $jsLineId = "l{$lessonId}n{$lessonLine['lingofon_content_num']}";
+        $jsLineId = "{$jsLessonId}n{$lessonLine['lingofon_content_num']}";
 
         echo "<div onclick='changeVisible(\"{$jsLineId}\")' style='margin: 0 0 10px'>";
         echo "<p class='lingofonContent'>{$lessonLine['lingofon_content']}</p>";

@@ -5,7 +5,7 @@ use yii\helpers\Html;
 
 /** @var $model app\models\lingofon\LessonContent */
 /** @var $this yii\web\View */
-/** @var $speaking - признак будет прослушивание или языковая практика получена из контроллера */
+/** @var $speaking - признак будет прослушивание или языковая практика. Переменная получена из контроллера */
 
 
 $content = $model->getContent();
@@ -414,6 +414,10 @@ if ($speaking) {
     }
 
     function playPrev() {
+        if(typeSpeaking) {
+            playStop();
+        }
+
         nowSound -= 1;
 
         if (nowSound == -1) {
@@ -439,6 +443,10 @@ if ($speaking) {
     }
 
     function playNext() {
+        if(typeSpeaking) {
+            playStop();
+        }
+
         nowSound += 1;
 
         if (nowSound == countSound) {

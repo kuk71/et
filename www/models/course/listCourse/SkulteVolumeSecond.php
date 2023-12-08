@@ -40,8 +40,8 @@ class SkulteVolumeSecond extends LL
                 'description' => 'Настоящее неопределённое время (Present Indefinite Tense) отрицательная и 
                     вопросительная форма предложений. Глагол «to do». Слово «often».',
                 'wordsKitId' => [307],
-                'lingofon_lesson_id' => [393],
-                'lingofon_lesson_id_speaking' => [],
+                'lingofon_lesson_id' => [393, 498,499,500, 501,],
+                'lingofon_lesson_id_speaking' => [498,499,500, 501,],
             ],
             [
                 'file' => "4",

@@ -227,64 +227,12 @@ $lessonParts[] = [
 ];
 
 $lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 1,
+    "type" => "lingofonAll",
 ];
 
 $lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 2,
+    "type" => "speakingAll",
 ];
-
-$lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 3,
-];
-
-$lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 4,
-];
-
-$lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 5,
-];
-
-$lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 6,
-];
-
-$lessonParts[] = [
-    "type" => "speaking",
-    "num" => 1,
-];
-
-$lessonParts[] = [
-    "type" => "speaking",
-    "num" => 2,
-];
-
-$lessonParts[] = [
-    "type" => "speaking",
-    "num" => 3,
-];
-
-$lessonParts[] = [
-    "type" => "speaking",
-    "num" => 4,
-];
-
-$lessonParts[] = [
-    "type" => "speaking",
-    "num" => 5,
-];
-
-// «»
-// <u></u>
-// <b class='color'></b>
-
 
 
 

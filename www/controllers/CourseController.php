@@ -18,7 +18,7 @@ class CourseController extends Controller
      */
     public function actionIndex()
     {
-        try {
+       try {
             $courseName = $this->getVar('courseName');
             if ($courseName === false) throw new Exception("Не задана переменная courseName", 0);
 

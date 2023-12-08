@@ -64,47 +64,11 @@ $lessonParts[] = [
 ];
 
 $lessonParts[] = [
-    "type" => "lingofon",
+    "type" => "lingofonAll",
     "num" => 1,
 ];
 
 $lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 2,
-];
-
-$lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 3,
-];
-
-$lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 4,
-];
-
-$lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 5,
-];
-
-$lessonParts[] = [
-    "type" => "speaking",
+    "type" => "speakingAll",
     "num" => 1,
 ];
-
-$lessonParts[] = [
-    "type" => "speaking",
-    "num" => 2,
-];
-
-$lessonParts[] = [
-    "type" => "speaking",
-    "num" => 3,
-];
-
-$lessonParts[] = [
-    "type" => "speaking",
-    "num" => 4,
-];
-
