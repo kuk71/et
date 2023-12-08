@@ -50,9 +50,15 @@ class InstituteIntermediate extends LL
             ],
             [
                 'file' => "1",
-                'description' => 'Holiday plans. Планы на отпуск',
+                'description' => 'The lost tie. Потерянный галстук',
                 'wordsKitId' => [426],
                 'lingofon_lesson_id' => [496],
+            ],
+            [
+                'file' => "1",
+                'description' => 'A road accident. Дорожное происшествие',
+                'wordsKitId' => [427],
+                'lingofon_lesson_id' => [497],
             ],
         ];
     }
@@ -95,11 +101,11 @@ class InstituteIntermediate extends LL
                 'nameEn' => 'Sixth',
                 'nameRu' => ['Шестой', 'шестого', 'шестому'],
             ],
-//            [
-//                'url' => 'seventh_english_lesson',
-//                'nameEn' => 'Seventh',
-//                'nameRu' => ['Седьмой', 'седьмого', 'седьмому'],
-//            ],
+            [
+                'url' => 'seventh_english_lesson',
+                'nameEn' => 'Seventh',
+                'nameRu' => ['Седьмой', 'седьмого', 'седьмому'],
+            ],
 //            [
 //                'url' => 'eighth_english_lesson',
 //                'nameEn' => 'Eighth',
