@@ -144,7 +144,10 @@ $lessonParts[] = [
 ];
 
 $lessonParts[] = [
-    "type" => "lingofon",
-    "num" => 1,
+    "type" => "lingofonAll",
+];
+
+$lessonParts[] = [
+    "type" => "speakingAll",
 ];
 

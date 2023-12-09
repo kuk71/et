@@ -60,6 +60,12 @@ class InstituteIntermediate extends LL
                 'wordsKitId' => [427],
                 'lingofon_lesson_id' => [497],
             ],
+            [
+                'file' => "1",
+                'description' => 'A road accident. Дорожное происшествие',
+                'wordsKitId' => [428],
+                'lingofon_lesson_id' => [507],
+            ],
         ];
     }
 
@@ -106,11 +112,11 @@ class InstituteIntermediate extends LL
                 'nameEn' => 'Seventh',
                 'nameRu' => ['Седьмой', 'седьмого', 'седьмому'],
             ],
-//            [
-//                'url' => 'eighth_english_lesson',
-//                'nameEn' => 'Eighth',
-//                'nameRu' => ['Восьмой', 'восьмого', 'восьмому'],
-//            ],
+            [
+                'url' => 'eighth_english_lesson',
+                'nameEn' => 'Eighth',
+                'nameRu' => ['Восьмой', 'восьмого', 'восьмому'],
+            ],
 //            [
 //                'url' => 'ninth_english_lesson',
 //                'nameEn' => 'Ninth',

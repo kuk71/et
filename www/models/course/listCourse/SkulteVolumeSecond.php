@@ -47,8 +47,8 @@ class SkulteVolumeSecond extends LL
                 'file' => "4",
                 'description' => 'Порядковые числительные. Усилительные местоимения. Глагол «have».',
                 'wordsKitId' => [308],
-                'lingofon_lesson_id' => [394],
-                'lingofon_lesson_id_speaking' => [],
+                'lingofon_lesson_id' => [394, 502, 503, 504, 505, 506],
+                'lingofon_lesson_id_speaking' => [502, 503, 504, 505, 506],
             ],
             [
                 'file' => "5",
