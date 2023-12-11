@@ -55,15 +55,15 @@ class SkulteVolumeSecond extends LL
                 'description' => 'Формы предложений в английском языке. Безличные предложения. Придаточные предложения. 
                     Деепричастие. Сказуемое перед подлежащим.',
                 'wordsKitId' => [309],
-                'lingofon_lesson_id' => [395],
-                'lingofon_lesson_id_speaking' => [],
+                'lingofon_lesson_id' => [395, 508, 509,510,511, 512],
+                'lingofon_lesson_id_speaking' => [508, 509,510,511, 512],
             ],
             [
                 'file' => "6",
                 'description' => 'Местоимение «any». Местоимение «one». Наречия. Личное местоимение «it».',
                 'wordsKitId' => [310],
-                'lingofon_lesson_id' => [396],
-                'lingofon_lesson_id_speaking' => [],
+                'lingofon_lesson_id' => [396, 513, 514, 515, 516, ],
+                'lingofon_lesson_id_speaking' => [513, 514, 515, 516, ],
             ],
             [
                 'file' => "7",
