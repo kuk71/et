@@ -32,19 +32,19 @@ class InstituteIntermediate extends LL
             ],
             [
                 'file' => "1",
-                'description' => 'A picnic. Пикник',
+                'description' => 'A picnic. Пикник.',
                 'wordsKitId' => [423],
                 'lingofon_lesson_id' => [493],
             ],
             [
                 'file' => "1",
-                'description' => 'Profile Peter Parker. Анкета Питера Паркера',
+                'description' => 'Profile Peter Parker. Анкета Питера Паркера.',
                 'wordsKitId' => [424],
                 'lingofon_lesson_id' => [494],
             ],
             [
                 'file' => "1",
-                'description' => 'Holiday plans. Планы на отпуск',
+                'description' => 'Holiday plans. Планы на отпуск.',
                 'wordsKitId' => [425],
                 'lingofon_lesson_id' => [495],
             ],
@@ -56,21 +56,33 @@ class InstituteIntermediate extends LL
             ],
             [
                 'file' => "1",
-                'description' => 'A road accident. Дорожное происшествие',
+                'description' => 'A road accident. Дорожное происшествие.',
                 'wordsKitId' => [427],
                 'lingofon_lesson_id' => [497],
             ],
             [
                 'file' => "1",
-                'description' => 'A road accident. Дорожное происшествие',
+                'description' => 'A little gossip. Маленькая сплетня.',
                 'wordsKitId' => [428],
                 'lingofon_lesson_id' => [507],
             ],
             [
                 'file' => "1",
-                'description' => 'A road accident. Дорожное происшествие',
+                'description' => 'A few errands. Несколько поручений.',
                 'wordsKitId' => [429],
                 'lingofon_lesson_id' => [517],
+            ],
+            [
+                'file' => "1",
+                'description' => 'Work and play. Работа и игра.',
+                'wordsKitId' => [430],
+                'lingofon_lesson_id' => [518],
+            ],
+            [
+                'file' => "1",
+                'description' => 'Career prospects. Карьерные перспективы.',
+                'wordsKitId' => [431],
+                'lingofon_lesson_id' => [521],
             ],
         ];
     }
@@ -128,16 +140,16 @@ class InstituteIntermediate extends LL
                 'nameEn' => 'Ninth',
                 'nameRu' => ['Девятый', 'девятого', 'девятому'],
             ],
-//            [
-//                'url' => 'tenth_english_lesson',
-//                'nameEn' => 'Tenth',
-//                'nameRu' => ['Десятый', 'десятого', 'десятому'],
-//            ],
-//            [
-//                'url' => 'eleventh_english_lesson',
-//                'nameEn' => 'Eleventh',
-//                'nameRu' => ['Одиннадцатый', 'одиннадцатого', 'одиннадцатому'],
-//            ],
+            [
+                'url' => 'tenth_english_lesson',
+                'nameEn' => 'Tenth',
+                'nameRu' => ['Десятый', 'десятого', 'десятому'],
+            ],
+            [
+                'url' => 'eleventh_english_lesson',
+                'nameEn' => 'Eleventh',
+                'nameRu' => ['Одиннадцатый', 'одиннадцатого', 'одиннадцатому'],
+            ],
 //            [
 //                'url' => 'twelfth_english_lesson',
 //                'nameEn' => 'Twelfth',

@@ -70,8 +70,8 @@ class SkulteVolumeSecond extends LL
                 'description' => 'Сравнительная степень. Вопросительные предложения. Существительные из глаголов. 
                     Наречия неопределённого времени.',
                 'wordsKitId' => [311],
-                'lingofon_lesson_id' => [397],
-                'lingofon_lesson_id_speaking' => [],
+                'lingofon_lesson_id' => [397, 519, 520],
+                'lingofon_lesson_id_speaking' => [519, 520],
             ],
             [
                 'file' => "8",
