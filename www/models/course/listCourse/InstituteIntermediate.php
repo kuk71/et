@@ -84,6 +84,18 @@ class InstituteIntermediate extends LL
                 'wordsKitId' => [431],
                 'lingofon_lesson_id' => [521],
             ],
+            [
+                'file' => "1",
+                'description' => 'Career prospects. Карьерные перспективы.',
+                'wordsKitId' => [432],
+                'lingofon_lesson_id' => [522],
+            ],
+            [
+                'file' => "1",
+                'description' => 'Career prospects. Карьерные перспективы.',
+                'wordsKitId' => [433],
+                'lingofon_lesson_id' => [523],
+            ],
         ];
     }
 
@@ -150,16 +162,16 @@ class InstituteIntermediate extends LL
                 'nameEn' => 'Eleventh',
                 'nameRu' => ['Одиннадцатый', 'одиннадцатого', 'одиннадцатому'],
             ],
-//            [
-//                'url' => 'twelfth_english_lesson',
-//                'nameEn' => 'Twelfth',
-//                'nameRu' => ['Двенадцатый', 'двенадцатого', 'двенадцатому'],
-//            ],
-//            [
-//                'url' => 'thirteenth_english_lesson',
-//                'nameEn' => 'Thirteenth',
-//                'nameRu' => ['Тринадцатый', 'тринадцатого', 'тринадцатому'],
-//            ],
+            [
+                'url' => 'twelfth_english_lesson',
+                'nameEn' => 'Twelfth',
+                'nameRu' => ['Двенадцатый', 'двенадцатого', 'двенадцатому'],
+            ],
+            [
+                'url' => 'thirteenth_english_lesson',
+                'nameEn' => 'Thirteenth',
+                'nameRu' => ['Тринадцатый', 'тринадцатого', 'тринадцатому'],
+            ],
 //            [
 //                'url' => 'fourteenth_english_lesson',
 //                'nameEn' => 'Fourteenth',
