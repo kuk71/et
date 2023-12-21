@@ -86,15 +86,21 @@ class InstituteIntermediate extends LL
             ],
             [
                 'file' => "1",
-                'description' => 'Career prospects. Карьерные перспективы.',
+                'description' => 'After the exams. После экзаменов.',
                 'wordsKitId' => [432],
                 'lingofon_lesson_id' => [522],
             ],
             [
                 'file' => "1",
-                'description' => 'Career prospects. Карьерные перспективы.',
+                'description' => 'An informal invitation. Неофициальное приглашение.',
                 'wordsKitId' => [433],
                 'lingofon_lesson_id' => [523],
+            ],
+            [
+                'file' => "1",
+                'description' => 'Detailed directions. Подробные указания.',
+                'wordsKitId' => [434],
+                'lingofon_lesson_id' => [524],
             ],
         ];
     }
@@ -172,11 +178,11 @@ class InstituteIntermediate extends LL
                 'nameEn' => 'Thirteenth',
                 'nameRu' => ['Тринадцатый', 'тринадцатого', 'тринадцатому'],
             ],
-//            [
-//                'url' => 'fourteenth_english_lesson',
-//                'nameEn' => 'Fourteenth',
-//                'nameRu' => ['Четырнадцатый', 'четырнадцатого', 'четырнадцатому'],
-//            ],
+            [
+                'url' => 'fourteenth_english_lesson',
+                'nameEn' => 'Fourteenth',
+                'nameRu' => ['Четырнадцатый', 'четырнадцатого', 'четырнадцатому'],
+            ],
 //            [
 //                'url' => 'fifteenth_english_lesson',
 //                'nameEn' => 'Fifteenth',

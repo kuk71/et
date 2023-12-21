@@ -78,8 +78,8 @@ class SkulteVolumeSecond extends LL
                 'description' => 'Годы в английском языке. Степени сравнения прилагательных. Отрицания в английских 
                     предложениях. Артикль «the» перед фамилиями. Артикли перед обращениями. «Me» вместо «I».',
                 'wordsKitId' => [312],
-                'lingofon_lesson_id' => [398],
-                'lingofon_lesson_id_speaking' => [],
+                'lingofon_lesson_id' => [398, 525, 526, 527],
+                'lingofon_lesson_id_speaking' => [525, 526, 527],
             ],
             [
                 'file' => "9",
