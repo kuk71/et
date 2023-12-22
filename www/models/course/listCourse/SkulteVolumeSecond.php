@@ -85,8 +85,8 @@ class SkulteVolumeSecond extends LL
                 'file' => "9",
                 'description' => 'Дополнения в английских предложениях. Слово «hair». Вопрос «What time is it?».',
                 'wordsKitId' => [313],
-                'lingofon_lesson_id' => [399],
-                'lingofon_lesson_id_speaking' => [],
+                'lingofon_lesson_id' => [399, 528, 529, 530, 531, 532, 533],
+                'lingofon_lesson_id_speaking' => [528, 529, 530, 531, 532],
             ],
             [
                 'file' => "10",
