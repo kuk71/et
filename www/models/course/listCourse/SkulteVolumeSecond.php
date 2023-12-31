@@ -93,8 +93,8 @@ class SkulteVolumeSecond extends LL
                 'description' => 'Настоящее продолженное время (Present Continuous Tense). Глагол «to be» в разговорной 
                     речи. «How do you do?». Наречия «either» и «any». Специфичные выражения в английском языке.',
                 'wordsKitId' => [314],
-                'lingofon_lesson_id' => [400],
-                'lingofon_lesson_id_speaking' => [],
+                'lingofon_lesson_id' => [400, 534, 535, 536, 537],
+                'lingofon_lesson_id_speaking' => [534, 535, 536, 537],
             ],
             [
                 'file' => "11",
