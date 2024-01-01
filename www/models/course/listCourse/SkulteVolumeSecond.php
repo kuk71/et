@@ -101,8 +101,8 @@ class SkulteVolumeSecond extends LL
                 'description' => 'Существительные в словосочетаниях. Префикс «un-». Глаголы оканчивающиеся на «-ie». 
                     Предлог «down». Слово «flesh». Суффикс  «-ly» в наречиях.',
                 'wordsKitId' => [316],
-                'lingofon_lesson_id' => [401],
-                'lingofon_lesson_id_speaking' => [],
+                'lingofon_lesson_id' => [401, 538,339, 540, 541, 542],
+                'lingofon_lesson_id_speaking' => [538,339, 540, 541,],
             ],
             [
                 'file' => "12",
@@ -405,7 +405,7 @@ class SkulteVolumeSecond extends LL
             [
                 'url' => 'twelfth_english_lesson',
                 'nameEn' => 'Twelfth',
-                'nameRu' => ['', 'двенадцатого', 'двенадцатому'],
+                'nameRu' => ['Двенадцатый', 'двенадцатого', 'двенадцатому'],
             ],
             [
                 'url' => 'thirteenth_english_lesson',
