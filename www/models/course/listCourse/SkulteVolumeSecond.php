@@ -108,8 +108,8 @@ class SkulteVolumeSecond extends LL
                 'file' => "12",
                 'description' => 'Слово «only». Местоимения «anything» и «something» в английских предложениях.',
                 'wordsKitId' => [317],
-                'lingofon_lesson_id' => [402],
-                'lingofon_lesson_id_speaking' => [],
+                'lingofon_lesson_id' => [402, 543, 544, 545, 546, 547],
+                'lingofon_lesson_id_speaking' => [543, 544, 545, 546, 547],
             ],
             [
                 'file' => "13",
