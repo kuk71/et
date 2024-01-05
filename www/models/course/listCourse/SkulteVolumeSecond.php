@@ -115,8 +115,8 @@ class SkulteVolumeSecond extends LL
                 'file' => "13",
                 'description' => 'Глагол «taste». Частица «-self». Предлог «to». Наречие «back».',
                 'wordsKitId' => [318],
-                'lingofon_lesson_id' => [403],
-                'lingofon_lesson_id_speaking' => [],
+                'lingofon_lesson_id' => [403, 548, 549, 550, 551, 552],
+                'lingofon_lesson_id_speaking' => [548, 549, 550, 551, 552],
             ],
             [
                 'file' => "14",
